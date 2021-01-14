@@ -18,18 +18,17 @@ class MainController {
     }
     async addNewData(req, res) {
         try {
-            if (req.body.name != null && req.body.email != null && req.body.password != null) {
+            if (req.body.firstname != null && req.body.email != null && req.body.password != null) {
                 const pool = await poolPromise
                 const result = await pool.request()
                     .input('firstname', sql.VarChar, req.body.firstname)
-                    .input('lastName', sql.VarChar, req.body.lastname)
+                    .input('lastname', sql.VarChar, req.body.lastname)
                     .input('email', sql.VarChar, req.body.email)
                     .input('password', sql.VarChar, req.body.password)
                     .input('address', sql.VarChar, req.body.address)
                     .input('city', sql.VarChar, req.body.city)
                     .input('state', sql.VarChar, req.body.state)
                     .input('zip', sql.VarChar, req.body.zip)
-                    .input('terms', sql.VarChar, req.body.terms)
                     .query(queries.addNewUser)
                 res.json(result)
             } else {
