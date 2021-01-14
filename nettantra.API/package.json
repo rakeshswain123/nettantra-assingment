@@ -1,0 +1,16 @@
+{
+  "name": "node-jsapp",
+  "version": "0.0.0",
+  "description": "NodeJSApp",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "msnodesqlv8": "^2.0.10",
+    "mssql": "^6.3.1"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "getAllData": "SELECT * FROM [dbo].[user_info]",
+  "addNewUser": "INSERT INTO [dbo].[user_info] (firstname,lastName,email,password,address,city,state,zip,terms) VALUES (@firstname,@lastName,@email,@password,@address,@city,@state,@zip,@terms) ",
+  "authenticateUser": "SELECT * FROM [dbo].[user_info] WHERE email = @email AND password = @password"
+}
